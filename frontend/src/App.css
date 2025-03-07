@@ -1,0 +1,95 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container geral */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Corpo */
+.app-body {
+  display: flex;
+  flex: 1;
+}
+
+/* Menu de navegação */
+.app-nav {
+  background-color: #878787;
+  width: 200px;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.app-nav ul {
+  list-style: none;
+}
+
+.app-nav ul li {
+  margin-bottom: 10px;
+}
+
+.app-nav ul li a {
+  text-decoration: none;
+  color: #feffff;
+  font-weight: bold;
+}
+
+/* Conteúdo principal */
+.app-content {
+  flex: 1;
+  position: relative; /* Para overlay */
+  padding: 20px;
+  color: #fff; /* texto branco sobre a imagem escurecida */
+
+  /* Imagem de fundo */
+  background: url("./assets/palacio.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+/* Overlay semitransparente */
+.app-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7); /* Ajuste a opacidade se quiser mais claro/escuro */
+  z-index: 0;
+}
+
+/* Para garantir que o conteúdo fique acima do overlay */
+.app-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer */
+.app-footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Ajustes para formulários, se quiser manter */
+input, select, textarea, button {
+  font-size: 1em;
+}
+
+
