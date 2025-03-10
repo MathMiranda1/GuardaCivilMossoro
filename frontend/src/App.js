@@ -1,7 +1,10 @@
+// frontend/src/App.js
+
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link, useNavigate } from 'react-router-dom';
 import LoginForm from './components/Login/LoginForm';
 import CadastroForm from './components/Login/CadastroForm';
+import PasswordResetForm from './components/Login/PasswordResetForm';
 import TestApi from './components/TestApi';
 import UnidadeList from './components/Unidade/UnidadeList';
 import UnidadeForm from './components/Unidade/UnidadeForm';
@@ -14,21 +17,39 @@ import GuardaForm from './components/Guarda/GuardaForm';
 import MovimentacaoList from './components/Movimentacao/MovimentacaoList';
 import MovimentacaoForm from './components/Movimentacao/MovimentacaoForm';
 import PrivateRoute from './components/PrivateRoute';
-import PasswordResetForm from './components/Login/PasswordResetForm';
 import './App.css';
+
+// Componente de botão de logout
+// Ele usa o hook useNavigate para redirecionar o usuário ao login após remover o token
+function LogoutButton() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('authToken');
+    navigate('/login');
+  };
+
+  return (
+    <button onClick={handleLogout} style={{ marginTop: '10px', cursor: 'pointer' }}>
+      Logout
+    </button>
+  );
+}
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Rota padrão: redireciona para o login */}
+        {/* Rota padrão: redireciona para /login */}
         <Route path="/" element={<Navigate to="/login" replace />} />
+
         {/* Rotas públicas */}
         <Route path="/login" element={<LoginForm />} />
         <Route path="/cadastro" element={<CadastroForm />} />
         <Route path="/password-reset" element={<PasswordResetForm />} />
-        {/* Você pode incluir uma rota para recuperação de senha, se necessário */}
-        {/* Rotas protegidas */}
+
+        {/* Rotas protegidas: tudo que estiver em path="/*" será acessado
+            somente se PrivateRoute permitir */}
         <Route
           path="/*"
           element={
@@ -40,16 +61,18 @@ function App() {
                 <div className="app-body">
                   <nav className="app-nav">
                     <ul>
-                      <li><a href="/unidades">Unidades</a></li>
-                      <li><a href="/nova-unidade">Nova Unidade</a></li>
-                      <li><a href="/equipes">Equipes</a></li>
-                      <li><a href="/nova-equipe">Nova Equipe</a></li>
-                      <li><a href="/armas">Armas</a></li>
-                      <li><a href="/nova-arma">Nova Arma</a></li>
-                      <li><a href="/guardas">Guardas</a></li>
-                      <li><a href="/novo-guarda">Novo Guarda</a></li>
-                      <li><a href="/movimentacoes">Movimentações</a></li>
-                      <li><a href="/nova-movimentacao">Nova Movimentação</a></li>
+                      <li><Link to="/unidades">Unidades</Link></li>
+                      <li><Link to="/nova-unidade">Nova Unidade</Link></li>
+                      <li><Link to="/equipes">Equipes</Link></li>
+                      <li><Link to="/nova-equipe">Nova Equipe</Link></li>
+                      <li><Link to="/armas">Armas</Link></li>
+                      <li><Link to="/nova-arma">Nova Arma</Link></li>
+                      <li><Link to="/guardas">Guardas</Link></li>
+                      <li><Link to="/novo-guarda">Novo Guarda</Link></li>
+                      <li><Link to="/movimentacoes">Movimentações</Link></li>
+                      <li><Link to="/nova-movimentacao">Nova Movimentação</Link></li>
+                      {/* Botão de logout */}
+                      <li><LogoutButton /></li>
                     </ul>
                   </nav>
                   <main className="app-content">
@@ -81,4 +104,3 @@ function App() {
 }
 
 export default App;
-

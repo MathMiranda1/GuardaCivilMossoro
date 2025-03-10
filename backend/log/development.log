@@ -7777,3 +7777,65 @@ Net::OpenTimeout (execution expired):
 app/controllers/users_controller.rb:21:in 'UsersController#create'
 [dotenv] Set [36mSMTP_ADDRESS[0m, [36mSMTP_DOMAIN[0m, [36mSMTP_PASSWORD[0m, [36mSMTP_PORT[0m, and [36mSMTP_USERNAME[0m
 [dotenv] Loaded [33m.env[0m
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 14:48:06 -0300
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 14:48:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/unidades"):
+  
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (1.4ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 326ms (Views: 29.8ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2025-03-10 14:49:46 -0300
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email" => "[FILTERED]", "password" => "[FILTERED]", "authentication" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'matheus.cardoso7@gmail.com' LIMIT 1 /*action='login',application='Backend',controller='authentication'*/[0m
+  ↳ app/controllers/authentication_controller.rb:4:in 'AuthenticationController#login'
+Completed 200 OK in 414ms (Views: 1.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 14:49:46 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.1ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 14:49:47 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.1ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 14:49:50 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.2ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 14:49:50 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.1ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 14:50:01 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.1ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 14:50:01 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.2ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
