@@ -7696,3 +7696,82 @@ Processing by MovimentacoesController#index as HTML
 Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 0.4ms (3 queries, 0 cached) | GC: 0.0ms)
 
 
+[dotenv] Set [36mSMTP_ADDRESS[0m, [36mSMTP_DOMAIN[0m, [36mSMTP_PASSWORD[0m, [36mSMTP_PORT[0m, and [36mSMTP_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/users" for 127.0.0.1 at 2025-03-10 08:57:32 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"name" => "Edenilson", "email" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:19:in 'UsersController#create'
+  [1m[36mUser Exists? (4.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'matheusmiranda@alu.uern.br' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:19:in 'UsersController#create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "first_login", "created_at", "updated_at", "temporary_password", "plaintext_password") VALUES ('Edenilson', 'matheusmiranda@alu.uern.br', '$2a$12$YbrFHSwiKEwaSh7cTIWA2OcKOKaR95mrTuf2r8QYp1eTxdNRt2fb2', 1, '2025-03-10 11:57:35.153464', '2025-03-10 11:57:35.153464', 'WelvN5ts', NULL) RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:19:in 'UsersController#create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:19:in 'UsersController#create'
+  Rendering text template
+  Rendered text template (Duration: 0.5ms | GC: 0.0ms)
+UserMailer#password_reset: processed outbound mail in 392.4ms
+Failed delivery of mail 67ced3b056f91_26ac16f03785e@DESKTOP-G2TNI0C.mail error_class=Net::OpenTimeout error_message="execution expired"
+Date: Mon, 10 Mar 2025 08:57:36 -0300
+From: no-reply@seusistema.com
+To: matheusmiranda@alu.uern.br
+Message-ID: <67ced3b056f91_26ac16f03785e@DESKTOP-G2TNI0C.mail>
+Subject: Sua senha
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ol=C3=A1, Edenilson!
+
+Sua senha =C3=A9: WelvN5ts
+Utilize essa senha para acessar o sistema e, se necess=C3=A1rio, redefina=
+-a para garantir a seguran=C3=A7a da sua conta.=
+
+Completed 500 Internal Server Error in 23023ms (ActiveRecord: 11.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Net::OpenTimeout (execution expired):
+  
+app/controllers/users_controller.rb:21:in 'UsersController#create'
+Started POST "/users" for 127.0.0.1 at 2025-03-10 09:02:25 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"name" => "Edenilson", "email" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:19:in 'UsersController#create'
+  [1m[36mUser Exists? (5.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'matheusmiranda@alu.uern.br' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:19:in 'UsersController#create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "first_login", "created_at", "updated_at", "temporary_password", "plaintext_password") VALUES ('Edenilson', 'matheusmiranda@alu.uern.br', '$2a$12$.sMaistqgvhXKWRVJ1ewVOiX1I1K68h8ANfcqVH1SOfAHEQb73GWy', 1, '2025-03-10 12:02:26.102334', '2025-03-10 12:02:26.102334', 'qbn5Rvce', NULL) RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:19:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:19:in 'UsersController#create'
+  Rendering text template
+  Rendered text template (Duration: 0.5ms | GC: 0.0ms)
+UserMailer#password_reset: processed outbound mail in 2.9ms
+Failed delivery of mail 67ced4d21c25f_26ac27f8379e5@DESKTOP-G2TNI0C.mail error_class=Net::OpenTimeout error_message="execution expired"
+Date: Mon, 10 Mar 2025 09:02:26 -0300
+From: no-reply@seusistema.com
+To: matheusmiranda@alu.uern.br
+Message-ID: <67ced4d21c25f_26ac27f8379e5@DESKTOP-G2TNI0C.mail>
+Subject: Sua senha
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ol=C3=A1, Edenilson!
+
+Sua senha =C3=A9: qbn5Rvce
+Utilize essa senha para acessar o sistema e, se necess=C3=A1rio, redefina=
+-a para garantir a seguran=C3=A7a da sua conta.=
+
+Completed 500 Internal Server Error in 21367ms (ActiveRecord: 6.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Net::OpenTimeout (execution expired):
+  
+app/controllers/users_controller.rb:21:in 'UsersController#create'
