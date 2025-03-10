@@ -7839,3 +7839,139 @@ Processing by UnidadesController#index as HTML
 Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+[dotenv] Set [36mSMTP_ADDRESS[0m, [36mSMTP_DOMAIN[0m, [36mSMTP_PASSWORD[0m, [36mSMTP_PORT[0m, and [36mSMTP_USERNAME[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for 127.0.0.1 at 2025-03-10 15:08:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email" => "[FILTERED]", "password" => "[FILTERED]", "authentication" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'matheus.cardoso7@gmail.com' LIMIT 1 /*action='login',application='Backend',controller='authentication'*/[0m
+  ↳ app/controllers/authentication_controller.rb:4:in 'AuthenticationController#login'
+Completed 200 OK in 606ms (Views: 1.2ms | ActiveRecord: 5.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 15:08:16 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.1ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 15:08:16 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.2ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 15:08:27 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.1ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/unidades" for 127.0.0.1 at 2025-03-10 15:08:27 -0300
+Processing by UnidadesController#index as HTML
+  [1m[36mUnidade Load (0.1ms)[0m  [1m[34mSELECT "unidades".* FROM "unidades" /*action='index',application='Backend',controller='unidades'*/[0m
+  ↳ app/controllers/unidades_controller.rb:7:in 'UnidadesController#index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/equipes" for 127.0.0.1 at 2025-03-10 15:08:30 -0300
+Processing by EquipesController#index as HTML
+  [1m[36mEquipe Load (0.1ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" /*action='index',application='Backend',controller='equipes'*/[0m
+  ↳ app/controllers/equipes_controller.rb:7:in 'EquipesController#index'
+Completed 200 OK in 245ms (Views: 12.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/equipes" for 127.0.0.1 at 2025-03-10 15:08:30 -0300
+Processing by EquipesController#index as HTML
+  [1m[36mEquipe Load (0.1ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" /*action='index',application='Backend',controller='equipes'*/[0m
+  ↳ app/controllers/equipes_controller.rb:7:in 'EquipesController#index'
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/armas" for 127.0.0.1 at 2025-03-10 15:08:36 -0300
+Processing by ArmasController#index as HTML
+  [1m[36mArma Load (0.6ms)[0m  [1m[34mSELECT "armas".* FROM "armas" /*action='index',application='Backend',controller='armas'*/[0m
+  ↳ app/controllers/armas_controller.rb:7:in 'ArmasController#index'
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/armas" for 127.0.0.1 at 2025-03-10 15:08:36 -0300
+Processing by ArmasController#index as HTML
+  [1m[36mArma Load (0.3ms)[0m  [1m[34mSELECT "armas".* FROM "armas" /*action='index',application='Backend',controller='armas'*/[0m
+  ↳ app/controllers/armas_controller.rb:7:in 'ArmasController#index'
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/armas/6" for 127.0.0.1 at 2025-03-10 15:10:22 -0300
+Processing by ArmasController#update as HTML
+  Parameters: {"arma" => {"modelo" => "Modelo W", "registro" => "12345566", "emprestada" => false}, "id" => "6"}
+  [1m[36mArma Load (0.2ms)[0m  [1m[34mSELECT "armas".* FROM "armas" WHERE "armas"."id" = 6 LIMIT 1 /*action='update',application='Backend',controller='armas'*/[0m
+  ↳ app/controllers/armas_controller.rb:43:in 'ArmasController#set_arma'
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='Backend',controller='armas'*/[0m
+  ↳ app/controllers/armas_controller.rb:27:in 'ArmasController#update'
+  [1m[36mArma Exists? (12.3ms)[0m  [1m[34mSELECT 1 AS one FROM "armas" WHERE "armas"."registro" = '12345566' AND "armas"."id" != 6 LIMIT 1 /*action='update',application='Backend',controller='armas'*/[0m
+  ↳ app/controllers/armas_controller.rb:27:in 'ArmasController#update'
+  [1m[36mArma Update (2.8ms)[0m  [1m[33mUPDATE "armas" SET "modelo" = 'Modelo W', "updated_at" = '2025-03-10 18:10:22.712553' WHERE "armas"."id" = 6 /*action='update',application='Backend',controller='armas'*/[0m
+  ↳ app/controllers/armas_controller.rb:27:in 'ArmasController#update'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='Backend',controller='armas'*/[0m
+  ↳ app/controllers/armas_controller.rb:27:in 'ArmasController#update'
+Completed 200 OK in 77ms (Views: 1.1ms | ActiveRecord: 50.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/armas" for 127.0.0.1 at 2025-03-10 15:10:22 -0300
+Processing by ArmasController#index as HTML
+  [1m[36mArma Load (0.1ms)[0m  [1m[34mSELECT "armas".* FROM "armas" /*action='index',application='Backend',controller='armas'*/[0m
+  ↳ app/controllers/armas_controller.rb:7:in 'ArmasController#index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/guardas" for 127.0.0.1 at 2025-03-10 15:10:37 -0300
+Processing by GuardasController#index as HTML
+  [1m[36mGuarda Load (0.1ms)[0m  [1m[34mSELECT "guardas".* FROM "guardas" /*action='index',application='Backend',controller='guardas'*/[0m
+  ↳ app/controllers/guardas_controller.rb:7:in 'GuardasController#index'
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" IN (1, 2) /*action='index',application='Backend',controller='guardas'*/[0m
+  ↳ app/controllers/guardas_controller.rb:7:in 'GuardasController#index'
+Completed 200 OK in 672ms (Views: 0.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/guardas" for 127.0.0.1 at 2025-03-10 15:10:38 -0300
+Processing by GuardasController#index as HTML
+  [1m[36mGuarda Load (0.1ms)[0m  [1m[34mSELECT "guardas".* FROM "guardas" /*action='index',application='Backend',controller='guardas'*/[0m
+  ↳ app/controllers/guardas_controller.rb:7:in 'GuardasController#index'
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" IN (1, 2) /*action='index',application='Backend',controller='guardas'*/[0m
+  ↳ app/controllers/guardas_controller.rb:7:in 'GuardasController#index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2025-03-10 15:11:20 -0300
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"email" => "[FILTERED]", "password_reset" => {"email" => "[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'matheus.cardoso7@gmail.com' LIMIT 1 /*action='create',application='Backend',controller='password_resets'*/[0m
+  ↳ app/controllers/password_resets_controller.rb:4:in 'PasswordResetsController#create'
+  Rendering text template
+  Rendered text template (Duration: 0.7ms | GC: 0.0ms)
+UserMailer#password_reset: processed outbound mail in 549.5ms
+Delivered mail 67cf2b4a8252a_39302758-4d0@DESKTOP-G2TNI0C.mail (4787.8ms)
+Date: Mon, 10 Mar 2025 15:11:22 -0300
+From: no-reply@seusistema.com
+To: matheus.cardoso7@gmail.com
+Message-ID: <67cf2b4a8252a_39302758-4d0@DESKTOP-G2TNI0C.mail>
+Subject: Sua senha
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ol=C3=A1, Matheus!
+
+Sua senha =C3=A9: senha123
+Utilize essa senha para acessar o sistema e, se necess=C3=A1rio, redefina=
+-a para garantir a seguran=C3=A7a da sua conta.=
+
+Completed 200 OK in 6719ms (Views: 0.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
