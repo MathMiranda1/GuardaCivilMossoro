@@ -7775,3 +7775,5 @@ Completed 500 Internal Server Error in 21367ms (ActiveRecord: 6.1ms (2 queries, 
 Net::OpenTimeout (execution expired):
   
 app/controllers/users_controller.rb:21:in 'UsersController#create'
+[dotenv] Set [36mSMTP_ADDRESS[0m, [36mSMTP_DOMAIN[0m, [36mSMTP_PASSWORD[0m, [36mSMTP_PORT[0m, and [36mSMTP_USERNAME[0m
+[dotenv] Loaded [33m.env[0m

@@ -21,6 +21,8 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Rota padrão: redireciona para o login */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
         {/* Rotas públicas */}
         <Route path="/login" element={<LoginForm />} />
         <Route path="/cadastro" element={<CadastroForm />} />
